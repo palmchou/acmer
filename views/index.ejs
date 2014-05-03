@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <% include heads.ejs %>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% include navbar.ejs %>
+    <div class="container theme-showcase" role="main">
+        <% include alart %>
+        <div class="jumbotron">
+            <h1>Hello, ACMer!</h1>
+            <p>This is a website who helps you and your teamate with organizing oj problems.</p>
+            <p><a href="/reg" class="btn btn-primary btn-lg" role="button">Sign up &raquo;</a></p>
+        </div>
+    </div>
+  <% include footer.ejs %>
   </body>
 </html>
