@@ -6,6 +6,7 @@ var mongodb = require('./db');
 function User(user){
     this.name = user.name;
     this.password = user.password;
+    this.team = null;
 }
 
 module.exports = User;
@@ -13,7 +14,8 @@ module.exports = User;
 User.prototype.save = function save(callback) {
     var user = {
         name: this.name,
-        password: this.password
+        password: this.password,
+        team: this.team
     };
     mongodb.open(function(err, db) {
         if (err)
