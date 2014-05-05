@@ -19,6 +19,7 @@ var logout = require('./routes/logout');
 var reg = require('./routes/reg');
 var team = require('./routes/team');
 var treg = require('./routes/treg');
+var down = require('./routes/down');
 
 var app = express();
 
@@ -61,6 +62,7 @@ app.use('/logout', logout);
 app.use('/reg', reg);
 app.use('/treg', treg);
 app.use('/t', team);
+app.use('/down', down);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
